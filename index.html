@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Page</title>
+<title>apply form</title>
 <meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="index.css" rel="stylesheet">
@@ -22,20 +22,25 @@ $(document).ready(function()
 <body >
 
 <div id="wb_LayoutGrid6">
-<form name="incubation form test" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-
-<div class="row">
-<div class="col-1">
-<input type="text" id="Editbox2" style="display:block;width: 100%;height:42px;z-index:0;" name="name" value="" spellcheck="false" placeholder="Name" data--100-bottom="transform:translate(0%,0px);" data-bottom-top="transform:translate(200%,0px);">
-<input type="text" id="Editbox1" style="display:block;width: 100%;height:42px;z-index:1;" name="email" value="" spellcheck="false" placeholder="Email address" data--100-bottom="transform:translate(0%,0px);" data-bottom-top="transform:translate(200%,0px);">
-<input type="text" id="Editbox3" style="display:block;width: 100%;height:42px;z-index:2;" name="subject" value="" spellcheck="false" placeholder="Subject" data--100-bottom="transform:translate(0%,0px);" data-bottom-top="transform:translate(200%,0px);">
-</div>
-<div class="col-2">
-<textarea name="TextArea1" id="TextArea1" style="display:block;width: 100%;;height:99px;z-index:3;" rows="3" cols="42" autocomplete="off" spellcheck="false" placeholder="MESSAGE" data--100-bottom="transform:translate(0%,0px);" data-bottom-top="transform:translate(200%,0px);"></textarea>
-<bkp.input type="submit" id="Button1" name="" value="SEND MESSAGE" style="display:block;width: 100%;;height:42px;z-index:4;" data--100-bottom="transform:translate(0%,0px);" data-bottom-top="transform:translate(400%,0px);">
-<button type="submit">Send</button>
-   </div>
-</div>
+<form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
 </form>
 </div>
 </body>
