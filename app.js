@@ -1,5 +1,3 @@
-//if(screen.width<575) document.querySelector(".incubator-logo").setAttribute("src","images/incubator-logo-mobile.png");
-
 const swiper = new Swiper('.main-swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -50,7 +48,6 @@ window.addEventListener("scroll", function(){
   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
 
   if (screen.width >= 575){
-    
     if (window.pageYOffset >= 500 || document.documentElement.scrollTop >= 500) {
       document.querySelector(".underline").classList.add("underline-reveal");
     } else if (window.pageYOffset <= 400 || document.documentElement.scrollTop <= 400) {
@@ -84,16 +81,7 @@ const navLinks = document.querySelectorAll('a[href^="#"]');
 navLinks.forEach((anchor, i) => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        // console.log(i);
-        // navSliderLeft = 0;
-        // let navSliderWidth = anchor.clientWidth;
-        // for(let x=0; x<i; x++) {
-        //   // console.log(i);
-        //   navSliderLeft += navLinks[i].clientWidth;
-        // }
-        // console.log(navSliderWidth);
-        // navSlider.setAttribute("style", `width: ${navSliderWidth+20}px; left: ${navSliderLeft}px;`);
-        
+  
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
       });
@@ -101,10 +89,20 @@ navLinks.forEach((anchor, i) => {
 });
 
 const nav = document.querySelector(".nav-main-mobile");
-function menuToggle(){
+const hamburger = document.querySelector(".hamburger");
+
+function menuToggle(e){
   nav.classList.toggle("nav-main-hide-mobile");
-  let hamburger = document.querySelector(".hamburger");
   hamburger.children[0].classList.toggle("x");
   hamburger.children[2].classList.toggle("y");
   hamburger.children[1].classList.toggle("x-fade");
 }
+
+AOS.init();
+
+Splitting();
+ScrollOut({
+  targets: '[data-splitting]'
+});
+
+if(screen.width<575) document.querySelectorAll(".point-card").forEach((card)=>{card.setAttribute("data-aos","fade-right")});
