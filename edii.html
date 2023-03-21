@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <title>Applicaton - Sairam Techno Incubator</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>EDII Funds - Sairam Techno Incubator </title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -16,9 +18,11 @@
     <nav class="nav-main">
         <img class="incubator-logo" src="images/logo.png" alt="Sairam Techno Incubator">
         <div class="nav-btns">
+            <div class="nav-slider"></div>
             <a class="nav-link" href="index.html">HOME</a>
-            <a class="nav-link" href="index.html#about-us">ABOUT US</a>
-            <a class="nav-link" href="index.html#team">TEAM</a>
+            <a class="nav-link" href="#about-us">ABOUT US</a>
+            <a class="nav-link" href="index.html#startups">STARTUPS</a>
+            <a class="nav-link" href="#funding">FUNDING</a>            
             <a class="nav-link" href="#footer">CONTACT</a>
         </div>
         <button class="hamburger" onclick="menuToggle()">
@@ -31,19 +35,47 @@
     <nav class="nav-main-mobile nav-main-hide-mobile">
         <div class="nav-btns">
             <a class="nav-link" href="index.html">HOME</a>
-            <a class="nav-link" href="index.html#about-us">ABOUT US</a>
-            <a class="nav-link" href="index.html#team">TEAM</a>
+            <a class="nav-link" href="#about-us">ABOUT US</a>
+            <a class="nav-link" href="index.html#startups">STARTUPS</a>
+            <a class="nav-link" href="#funding">FUNDING</a>
             <a class="nav-link" href="#footer">CONTACT</a>
         </div>
     </nav>
-    <br>
-    <br><br><br>
-    <section id="forms" class="fofo">
-        <div class="Form-contact">
-            <iframe src="https://forms.gle/qTQCSKVyrrDLgaJ26" frameborder="0" width="1000" height="1000"></iframe>
+
+    <div class="nav-comp"></div>
+
+
+    <section id="funding" class="why-funds">
+        <img src="images/incubator-logo.png" alt="Sairam Incubator Foundation Logo">
+
+        <div class="data">
+            <h2> INNOVATION VOUCHER PROGRAMME </h2>
+            <hr class="underline-funds">
+            <p class="desc-info">
+                Innovation Voucher Programme (IVP) is a unique State Government initiative to promote research and innovation among MSMEs/Start-ups from <strong> Agriculture, Horticulture, Veterinary, Fisheries, Engineering, Waste Management, Health, Automobiles, Nano-Technology, Electronics </strong> etc. <br><br> A solution that will enable Startups and MSMEs with innovative ideas to move to the next stages like research, validation, market study and product development. The selection process is done with steering committees that consists of top officials from the MSME Department of Government of Tamil Nadu and eminent people from the Startup and industrial fraternity in the State.
+            </p>
         </div>
     </section>
-    <br>
+    
+    <section id="voucher" class="voucher-a">
+        <h2 class="our-projects">Voucher A</h2>
+        <p class="desc-info">Grant is given for innovative idea to further proceed in getting their product idea validated with research and market study. This voucher provides grant upto Rs.2 lakh for selected MSMEs and Startups who will be provided constant support and also be monitored for progress with the help of their knowledge partner</p>
+        <div class="vouching-companies">
+            <div class="company-card" data-aos="zoom-out" data-aos-offset="100" data-aos-delay="100">
+                <img src="images/sky-catch-robots-cropped.jpg" alt="">
+                <h3>Sky Catch Robots</h3>
+            </div>
+            <div class="company-card" data-aos="zoom-out" data-aos-offset="100" data-aos-delay="200">
+                <img src="images/techno-raise.jpg" alt="">
+                <h3>Techno Raise, Pvt. Ltd.</h3>
+            </div>
+            <div class="company-card" data-aos="zoom-out" data-aos-offset="100" data-aos-delay="300">
+                <img src="images/big-bucks.jpeg" alt="">
+                <h3>Big Bucks Innovation</h3>
+            </div>
+        </div>
+    </section>
+
     <section id="footer" class="footer">
         <div class="contact-details">
             <img src="images/logo.png" alt="" class="incub-footer">
@@ -71,5 +103,10 @@
     </section>
 
     <script src="app.js"></script>
+    <script>
+        window.onload = (e)=>{
+            document.querySelector(".underline-funds").classList.add("underline-reveal");
+        }
+    </script>
 </body>
 </html>

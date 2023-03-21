@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <title>Applicaton - Sairam Techno Incubator</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>iDEX Funds - Sairam Techno Incubator </title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -16,9 +18,11 @@
     <nav class="nav-main">
         <img class="incubator-logo" src="images/logo.png" alt="Sairam Techno Incubator">
         <div class="nav-btns">
+            <div class="nav-slider"></div>
             <a class="nav-link" href="index.html">HOME</a>
             <a class="nav-link" href="index.html#about-us">ABOUT US</a>
-            <a class="nav-link" href="index.html#team">TEAM</a>
+            <a class="nav-link" href="index.html#startups">STARTUPS</a>
+            <a class="nav-link" href="#voucher">FUNDING</a>            
             <a class="nav-link" href="#footer">CONTACT</a>
         </div>
         <button class="hamburger" onclick="menuToggle()">
@@ -32,18 +36,37 @@
         <div class="nav-btns">
             <a class="nav-link" href="index.html">HOME</a>
             <a class="nav-link" href="index.html#about-us">ABOUT US</a>
-            <a class="nav-link" href="index.html#team">TEAM</a>
+            <a class="nav-link" href="index.html#startups">STARTUPS</a>
+            <a class="nav-link" href="#voucher">FUNDING</a>
             <a class="nav-link" href="#footer">CONTACT</a>
         </div>
     </nav>
-    <br>
-    <br><br><br>
-    <section id="forms" class="fofo">
-        <div class="Form-contact">
-            <iframe src="https://forms.gle/qTQCSKVyrrDLgaJ26" frameborder="0" width="1000" height="1000"></iframe>
+
+    <div class="nav-comp"></div>
+
+
+    <section id="funding" class="why-funds">
+        <img src="images/incubator-logo.png" alt="Sairam Incubator Foundation Logo">
+
+        <div class="data">
+            <h2> HOW FUNDING WORKS? </h2>
+            <hr class="underline-funds">
+            <p class="desc-info">
+                Taking the iDEX initiative further, Defence India Startup Challenge &quot;has been launched by Ministry in partnership with AIM, aimed at supporting Startups / MSMEs / Innovators to create  prototypes and / or commercialize products / solutions in the area of National Defence and Security.
+            </p>
         </div>
     </section>
-    <br>
+    
+    <section id="voucher" class="voucher-a">
+        <h2 class="our-projects">iDEX</h2>
+        <div class="vouching-companies">
+            <div class="company-card">
+                <img src="images/about-image.jpg" alt="">
+                <h3>Armour Grandeur, Pvt. Ltd.</h3>
+            </div>
+        </div>
+    </section>
+
     <section id="footer" class="footer">
         <div class="contact-details">
             <img src="images/logo.png" alt="" class="incub-footer">
@@ -71,5 +94,10 @@
     </section>
 
     <script src="app.js"></script>
+    <script>
+        window.onload = (e)=>{
+            document.querySelector(".underline-funds").classList.add("underline-reveal");
+        }
+    </script>
 </body>
 </html>
