@@ -181,7 +181,7 @@ const companyCountUpOptions = {
   suffix: ' +',
 };
 
-var companyCountUp = new countUp.CountUp('company-countup', 91, companyCountUpOptions);
+var companyCountUp = new countUp.CountUp('company-countup', 85, companyCountUpOptions);
 if (!companyCountUp.error) {
   companyCountUp.start();
 } else {
