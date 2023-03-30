@@ -1,4 +1,14 @@
 // import { CountUp } from './countUp.min.js';
+const nav = document.querySelector(".nav-main-mobile");
+const hamburger = document.querySelector(".hamburger");
+
+function menuToggle(e){
+  nav.classList.toggle("nav-main-hide-mobile");
+  hamburger.children[0].classList.toggle("x");
+  hamburger.children[2].classList.toggle("y");
+  hamburger.children[1].classList.toggle("x-fade");
+}
+
 AOS.init();
 
 var lastScrollTop = 0;
@@ -46,16 +56,6 @@ navLinks.forEach((anchor, i) => {
       });
   });
 });
-
-const nav = document.querySelector(".nav-main-mobile");
-const hamburger = document.querySelector(".hamburger");
-
-function menuToggle(e){
-  nav.classList.toggle("nav-main-hide-mobile");
-  hamburger.children[0].classList.toggle("x");
-  hamburger.children[2].classList.toggle("y");
-  hamburger.children[1].classList.toggle("x-fade");
-}
 
 if(screen.width<575) document.querySelectorAll(".point-card").forEach((card)=>{card.setAttribute("data-aos","fade-right")});
 
