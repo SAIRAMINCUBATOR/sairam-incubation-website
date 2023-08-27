@@ -52,6 +52,8 @@ const projectsSwiper = new Swiper('.projects-swiper', {
 
 AOS.init();
 
+document.querySelectorAll(".form a").forEach(item => item.classList.remove("nav-link"));
+
 var lastScrollTop = 0;
 
 // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
@@ -189,3 +191,17 @@ if (!companyCountUp.error) {
 } else {
   console.error(companyCountUp.error);
 }
+
+new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  grabCursor: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
